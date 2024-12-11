@@ -1,0 +1,220 @@
+/* FONT SETUP */
+
+@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@import url("https://use.typekit.net/kpn8rbn.css");
+
+.lekton-regular {
+  font-family: "Lekton", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lekton-bold {
+  font-family: "Lekton", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lekton-regular-italic {
+  font-family: "Lekton", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.neue-haas {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.sloop {
+  font-family: "sloop-script-one", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.vollkorn {
+  font-family: "vollkorn-sc", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.littlebit {
+font-family: "littlebit-loopy-variable", sans-serif;
+font-variation-settings: "LOOP" 1;
+}
+
+/* SETUP */
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f2f0ef;
+}
+
+/* NOTES */
+
+.note {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: scroll;
+  padding-bottom: 100px;
+}
+
+.note p {
+  top: 50%;
+  left: 50%;
+  font-family: "Lekton", monospace;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: 26201c;
+  box-sizing: border-box;
+  padding: 65px 50px 0px;
+  display: flex;
+  color: #f2f0ef;
+  justify-content: center;
+  background-color: #1d2c64;
+  width: 600px;
+  height: 300px;
+  margin: 10px auto;
+}
+
+.notecontainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px 0;
+  height: calc(100vh - 50px);
+  overflow-y: auto;
+}
+
+.redact {
+  background-color: black;
+  color: black;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: initial;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.title {
+  font-family: "sloop-script-one", sans-serif;
+  font-size: 24px;
+  color: #f2f0ef;
+  z-index: 100;
+  letter-spacing: 5%;
+  margin-top: 50px;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+/* FOOTER */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  background-color: #1d2c64;
+  border: black solid;
+  border-width: 2px 0 0 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+#messageForm {
+  margin-top: 20px;
+}
+
+.user {
+  font-family: "Lekton", monospace;
+  font-size: 20px;
+}
+
+.form {
+  width: 50%;
+  height: 25px;
+  font-family: "Lekton", monospace;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.btn-submit {
+  font-family: "Lekton", monospace;
+  font-size: 20px;
+  height: 30px;
+  background-color: #f2f0ef;
+}
+
+.btn-submit:hover {
+  background-color: #1d2c64;
+  cursor: pointer;
+}
+
+/* OFFLINE FEATURE */
+
+.offline {
+  background-color: #1d2c64;
+  width: 100%;
+  height: 100%;
+}
+
+.off-container {
+  box-sizing: border-box;
+  padding-right: 100px;
+  padding-left: 100px;
+  max-height: 800px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.off-text {
+  display: flex;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: white;
+  font-size: 130px;
+  text-transform: uppercase;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+.off-text span {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: inline;
+  margin-right: 0.2em;
+}
+
+.off-text span:first-child {
+  opacity: 1;
+}
+
+.off-text span:hover,
+.off-text span.revealed {
+  opacity: 1;
+}

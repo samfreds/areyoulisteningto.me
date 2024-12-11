@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+	<script src="/message.js"></script>
+	<script src="/scroll.js"></script>
+	<script src="offline.js"></script>
+	<script src="reveal.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Collecting Data + Retrieving Data</title>
+</head>
+
+<body>
+	<div id="online-world">
+		<div class="notecontainer" id="chat">
+			<div class="note" id="note">
+				<div id="dataDisplay"></div>
+			</div>
+		</div>
+		<div class="footer">
+			<form class="container" id="messageForm">
+				<div class="form-group">
+					<label class="user" for="exampleFormControlInput1">
+					</label>
+					<input type="text" class="form" id="text" placeholder="&nbsp What do you want to say?">
+					<button type="submit" class="btn-submit">SEND</button>
+				</div>
+		</div>
+		</form>
+	</div>
+	<div id="offline-world" class="showPdf">
+		<div class="offline">
+			<div class="off-container">
+				<div class="off-text"><span>Though</span> <span>the</span> <span>digital</span> <span>space</span>
+					<span>is</span> <span>often</span> <span>referred</span> <span>to</span> <span>as</span>
+					<span>a</span> <span>place</span> <span>for</span> <span>communication,</span>
+					<span>especially</span>
+					<span>with</span> <span>those</span> <span>not</span> <span>in</span> <span>close</span>
+					<span>proximity</span> <span>to</span> <span>us,</span> <span>often</span> <span>it</span>
+					<span>is</span> <span>the</span> <span>opposite.</span> <span>We</span> <span>DM</span>
+					<span>and</span> <span>text</span> <span>and</span> <span>reply</span> <span>without</span>
+					<span>taking</span> <span>a</span>
+					<span>second</span> <span>to</span> <span>think</span> <span>about</span> <span>what</span>
+					<span>another</span> <span>person</span> <span>is</span> <span>saying.</span> <span>Maybe</span>
+					<span>there</span> <span>is</span> <span>something</span> <span>sacred</span> <span>about</span>
+					<span>patience.</span>
+					<span>Letting</span>
+					<span>things</span> <span>sit</span> <span>for</span> <span>a</span> <span>moment.</span><br />
+					<span>Maybe</span> <span>not.</span><br /><span>You</span> <span>decide.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
