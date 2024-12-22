@@ -247,4 +247,8 @@ body {
   padding-bottom: 50px;
 }
 
+.body {
+  background-color: red;
+}
+
 }
