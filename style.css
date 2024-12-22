@@ -234,6 +234,10 @@ body {
   padding: 25px 50px 0px;
 }
 
+.notecontainer {
+  background-color: red;
+}
+
 .title {
   font-size: 12px;
   margin-top: 15px;
@@ -245,10 +249,6 @@ body {
 
 .note {
   padding-bottom: 50px;
-}
-
-.body {
-  background-color: red;
 }
 
 }
