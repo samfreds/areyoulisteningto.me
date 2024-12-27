@@ -240,7 +240,6 @@ body {
   }
   .notecontainer {
   background-color: red;
-  padding-bottom: 100px; 
   margin-bottom: 80px;
   }
   .note::after {
