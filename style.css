@@ -248,9 +248,10 @@ body {
   padding-bottom: 100px;
 }
 .btn-submit {
-  height: 25px;
+  height: 30px;
   border-radius: 2px;
   background-color: #f2f0ef;
+  color: gray;
 }
 
 }
