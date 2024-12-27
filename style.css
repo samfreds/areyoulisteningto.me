@@ -234,7 +234,7 @@ body {
   padding: 25px 40px 0px;
   }
   .note {
-    padding-bottom: 125px;
+    padding-bottom: 130px;
   }
   .notecontainer {
   background-color: red;
@@ -247,9 +247,10 @@ body {
   font-size: 14px;
 }
 .btn-submit {
-  height: 28px;
+  height: 25px;
+  width: 20%;
   border-radius: 2px;
-  background-color: white;
+  background-color: #1d2c64;
   color: #f2f0ef;
   margin: 0 auto;
 }
