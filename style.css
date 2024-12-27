@@ -246,6 +246,7 @@ body {
   margin-top: 15px;
 }
 .form {
+  width: 60%;
   font-size: 14px;
 }
 .btn-submit {
@@ -254,7 +255,12 @@ body {
   border-radius: 2px;
   background-color: #1d2c64;
   color: #f2f0ef;
-  margin-left: 10px;
+  padding: 0 10px;
 }
-
+#messageForm {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px auto;
+}
 }
