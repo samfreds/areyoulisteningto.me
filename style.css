@@ -233,9 +233,11 @@ body {
   height: 150px;
   padding: 25px 40px 0px;
   }
+  .note {
+    padding-bottom: 125px;
+  }
   .notecontainer {
   background-color: red;
-  
   }
   .title {
   font-size: 12px;
@@ -249,10 +251,7 @@ body {
   border-radius: 2px;
   background-color: white;
   color: #f2f0ef;
-  margin: auto;
-}
-.footer {
-  padding-top: 50px;
+  margin: 0 auto;
 }
 
 }
