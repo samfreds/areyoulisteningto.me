@@ -245,16 +245,14 @@ body {
   .notecontainer {
     background-color: red;
     padding-bottom: 10px;
-    /* Match the gap between notes */
     margin-bottom: 10px;
-    height: calc(100vh - 95px); /* Account for footer height (75px) plus desired gap (20px) */
+    height: calc(100vh - 85px);
   }
 
   .note::after {
     content: '';
     display: block;
     height: 10px;
-    /* Match the gap size */
     width: 100%;
   }
 
