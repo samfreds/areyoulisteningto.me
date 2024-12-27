@@ -245,13 +245,13 @@ body {
   font-size: 14px;
 }
 .note {
-  padding-bottom: 100px;
+  padding-bottom: 125px;
 }
 .btn-submit {
   height: 30px;
   border-radius: 2px;
-  background-color: #f2f0ef;
-  color: gray;
+  background-color: white;
+  color: #f2f0ef;
 }
 
 }
