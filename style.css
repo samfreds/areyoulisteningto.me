@@ -240,6 +240,14 @@ body {
   }
   .notecontainer {
   background-color: red;
+  padding-bottom: 100px; 
+  margin-bottom: 80px;
+  }
+  .note::after {
+    content: '';
+    display: block;
+    height: 80px; /* Match the footer height */
+    width: 100%;
   }
   .title {
   font-size: 13px;
@@ -255,6 +263,7 @@ body {
 .form {
   width: 60%;
   font-size: 14px;
+  text-align: center;
 }
 .btn-submit {
   height: 28px;
