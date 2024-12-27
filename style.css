@@ -240,12 +240,13 @@ body {
   }
   .notecontainer {
   background-color: red;
-  margin-bottom: 80px;
+  padding-bottom: 10px; /* Match the gap between notes */
+  margin-bottom: 10px;
   }
   .note::after {
     content: '';
     display: block;
-    height: 80px; /* Match the footer height */
+    height: 10px; /* Match the gap size */
     width: 100%;
   }
   .title {
