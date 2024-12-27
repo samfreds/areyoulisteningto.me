@@ -140,6 +140,7 @@ body {
 
 #messageForm {
   margin-top: 20px;
+  text-align: center;
 }
 
 .user {
@@ -247,7 +248,7 @@ body {
   font-size: 14px;
 }
 .btn-submit {
-  height: 30px;
+  height: 28px;
   width: 20%;
   border-radius: 2px;
   background-color: #1d2c64;
