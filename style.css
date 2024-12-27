@@ -244,17 +244,15 @@ body {
 .form {
   font-size: 14px;
 }
-.note {
-  padding-bottom: 125px;
-}
 .btn-submit {
   height: 28px;
   border-radius: 2px;
   background-color: white;
   color: #f2f0ef;
+  margin: auto;
 }
 .footer {
-  padding-top: 25px;
+  padding-top: 50px;
 }
 
 }
