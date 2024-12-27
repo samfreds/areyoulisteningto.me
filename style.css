@@ -247,12 +247,12 @@ body {
   font-size: 14px;
 }
 .btn-submit {
-  height: 25px;
+  height: 30px;
   width: 20%;
   border-radius: 2px;
   background-color: #1d2c64;
   color: #f2f0ef;
-  margin: 0 auto;
+  margin-left: 10px;
 }
 
 }
