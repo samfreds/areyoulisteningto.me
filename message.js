@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     firebase.initializeApp(firebaseConfig);
 
-    // MODAL SETUP (Kept the same as original)
     const modal = document.createElement('div');
     modal.innerHTML = `
 <div id="usernameModal" style="
@@ -72,10 +71,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(modal);
     let user = '';
 
-    // Project form and messages reference
+    
     let messagesRef = firebase.database().ref('Collected Data');
 
-    // Username form submission
+    
     document.getElementById('usernameForm').addEventListener('submit', function (e) {
         e.preventDefault();
         const usernameInput = document.getElementById('username');
@@ -92,8 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('messageForm').addEventListener('submit', submitForm);
         displayData();
 
-        // Add a periodic update mechanism
-        setInterval(displayData, 10000); // Update every 10 seconds
+        
+        setInterval(displayData, 10000); 
     }
 
 
@@ -112,14 +111,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Function to get form values
+    
     function getInputVal(id) {
         return document.getElementById(id).value;
     }
 
-    // Function to save the message to firebase with word reveal mechanism
+    
     function saveMessage(text) {
-        // Split the message into words
+        
         const words = text.trim().split(/\s+/);
 
         let newMessageRef = messagesRef.push();
@@ -129,9 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
             words: words,
             timestamp: firebase.database.ServerValue.TIMESTAMP,
             revealStartTime: Date.now(),
-            fullyRevealed: false  // New flag to track reveal status
+            fullyRevealed: false
         }).then(() => {
-            // Mark previous messages as fully revealed
+            
             markPreviousMessagesFullyRevealed();
             console.log('Message saved successfully');
         }).catch((error) => {
@@ -139,22 +138,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Function to display data with blur mechanism
+    
     function displayData() {
         messagesRef.limitToLast(30).on('value', function (snapshot) {
             let dataDisplay = document.getElementById('dataDisplay');
             dataDisplay.innerHTML = '';
 
-            // Log the entire snapshot for debugging
+            
             console.log('Firebase snapshot:', snapshot.val());
 
             snapshot.forEach(function (childSnapshot) {
                 let childData = childSnapshot.val();
 
-                // Log individual child data for debugging
+                
                 console.log('Child data:', childData);
 
-                // Ensure all required fields exist
+                
                 if (!childData || !childData.sender || !childData.message || !childData.words) {
                     console.error('Incomplete message data:', childData);
                     return;
@@ -164,10 +163,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 let date = new Date(timestamp);
                 let formattedDate = date.toLocaleString();
 
-                // Calculate how many words to reveal based on time passed
+                
                 let wordsToReveal = calculateRevealedWords(childData);
 
-                // Construct the displayed message
+                
                 let displayText = constructDisplayText(childData.words, wordsToReveal);
 
                 dataDisplay.innerHTML +=
@@ -180,20 +179,20 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Firebase error:', error);
         });
     }
-    // Calculate how many words to reveal based on time passed
+    
     function calculateRevealedWords(messageData) {
-        // If no original reveal time, return first word
+        
         if (!messageData.revealStartTime) return 1;
 
-        // Calculate seconds passed since message was sent
+        
         const secondsPassed = Math.floor((Date.now() - messageData.revealStartTime) / 1000);
 
-        // Reveal one additional word every 10 seconds, max total words
+       
         return Math.min(Math.floor(secondsPassed / 10) + 1, messageData.words.length);
     }
 
     function constructDisplayText(words, revealCount) {
-        // Robust error checking
+       
         if (!Array.isArray(words)) {
             console.error('Words is not an array:', words);
             return 'Invalid message';
@@ -206,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ).join(' ');
     }
 
-    // Word count function (kept the same as original)
+   
     function wordCount(input) {
         const words = input.trim().split(/\s+/);
         const wordCount = words.length;
@@ -215,6 +214,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return wordCount <= 10 && charCount <= 60;
     }
 
-    // Call displayData to show data on page load
+    
     displayData();
 });
